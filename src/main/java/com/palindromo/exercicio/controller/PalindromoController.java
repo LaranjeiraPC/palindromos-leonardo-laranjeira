@@ -1,8 +1,8 @@
 package com.palindromo.exercicio.controller;
 
-import com.palindromo.exercicio.domain.dto.PalindromoDTO;
-import com.palindromo.exercicio.service.ListaPalindromoService;
-import com.palindromo.exercicio.service.SalvaPalindromoService;
+import com.palindromo.exercicio.domain.model.dto.PalindromoDTO;
+import com.palindromo.exercicio.domain.service.ListaPalindromoService;
+import com.palindromo.exercicio.domain.service.SalvaPalindromoService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;

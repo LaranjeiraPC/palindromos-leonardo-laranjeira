@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "f5234d8c-ad7e-40ab-b932-de13af3342d3",
+		"name": "Palindromo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33378815"
+	},
+	"item": [
+		{
+			"name": "Inserir Palindromo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n \"OSSO\",\r\n \"ASDF\",\r\n \"AZFZZZA\"\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/palindromo",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"palindromo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Palindromo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/palindromo",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"palindromo"
+					],
+					"query": [
+						{
+							"key": "palindromo",
+							"value": "TEET",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}

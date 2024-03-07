@@ -1,4 +1,4 @@
-package com.palindromo.exercicio.util;
+package com.palindromo.exercicio.domain.util;
 
 import lombok.experimental.UtilityClass;
 

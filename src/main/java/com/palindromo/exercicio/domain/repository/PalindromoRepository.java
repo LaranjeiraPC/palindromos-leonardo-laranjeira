@@ -1,6 +1,6 @@
-package com.palindromo.exercicio.repository;
+package com.palindromo.exercicio.domain.repository;
 
-import com.palindromo.exercicio.domain.model.Palindromo;
+import com.palindromo.exercicio.domain.model.entity.Palindromo;
 import jakarta.annotation.Nullable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

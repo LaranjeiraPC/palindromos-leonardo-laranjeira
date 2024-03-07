@@ -17,6 +17,16 @@
 	<description>Caça Palíndromo</description>
 
 	<properties>
+		<sonar.exclusions>
+			**/Application.java,
+			**/AppConstants.java,
+			**/controller/**,
+			**/domain/exception/**,
+			**/domain/model/**,
+			**/domain/repository/**,
+			**/domain/util/**,
+			**/workflow/converter/**
+		</sonar.exclusions>
 		<java.version>17</java.version>
 	</properties>
 

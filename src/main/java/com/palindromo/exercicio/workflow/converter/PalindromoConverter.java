@@ -1,7 +1,7 @@
-package com.palindromo.exercicio.converter;
+package com.palindromo.exercicio.workflow.converter;
 
-import com.palindromo.exercicio.domain.dto.PalindromoDTO;
-import com.palindromo.exercicio.domain.model.Palindromo;
+import com.palindromo.exercicio.domain.model.dto.PalindromoDTO;
+import com.palindromo.exercicio.domain.model.entity.Palindromo;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

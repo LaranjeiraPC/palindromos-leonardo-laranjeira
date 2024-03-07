@@ -1,11 +1,11 @@
-package com.palindromo.exercicio.service.impl;
+package com.palindromo.exercicio.domain.service.impl;
 
-import com.palindromo.exercicio.domain.dto.PalindromoDTO;
-import com.palindromo.exercicio.domain.model.Palindromo;
-import com.palindromo.exercicio.exception.BusinessException;
-import com.palindromo.exercicio.repository.PalindromoRepository;
-import com.palindromo.exercicio.service.SalvaPalindromoService;
-import com.palindromo.exercicio.util.PalavraUtils;
+import com.palindromo.exercicio.domain.exception.BusinessException;
+import com.palindromo.exercicio.domain.model.dto.PalindromoDTO;
+import com.palindromo.exercicio.domain.model.entity.Palindromo;
+import com.palindromo.exercicio.domain.repository.PalindromoRepository;
+import com.palindromo.exercicio.domain.service.SalvaPalindromoService;
+import com.palindromo.exercicio.domain.util.PalavraUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,8 +15,8 @@ import java.util.List;
 import java.util.Objects;
 
 import static com.palindromo.exercicio.AppConstants.*;
-import static com.palindromo.exercicio.converter.PalindromoConverter.INSTANCE;
-import static com.palindromo.exercicio.util.PredicateUtils.validar;
+import static com.palindromo.exercicio.domain.util.PredicateUtils.validar;
+import static com.palindromo.exercicio.workflow.converter.PalindromoConverter.INSTANCE;
 
 @Slf4j
 @Service
@@ -26,7 +26,7 @@ public class SalvaPalindromoServiceImpl implements SalvaPalindromoService {
     private PalindromoRepository palindromoRepository;
 
     public List<PalindromoDTO> salvarPalindromo(List<String> palavras) {
-        log.info("Validando palíndromo");
+        log.info("Validando palíndromo(s)");
         validar(palavras, PalavraUtils::verificarColunas, () -> new BusinessException(MENSAGEM_ERROR_COLUNA));
         validar(palavras, PalavraUtils::verificarLinhas, () -> new BusinessException(MENSAGEM_ERROR_LINHA));
 

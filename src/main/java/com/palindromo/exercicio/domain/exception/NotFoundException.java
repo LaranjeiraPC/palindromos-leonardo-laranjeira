@@ -1,4 +1,4 @@
-package com.palindromo.exercicio.exception;
+package com.palindromo.exercicio.domain.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

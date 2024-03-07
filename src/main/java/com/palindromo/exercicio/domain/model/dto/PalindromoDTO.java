@@ -1,4 +1,4 @@
-package com.palindromo.exercicio.domain.dto;
+package com.palindromo.exercicio.domain.model.dto;
 
 import lombok.*;
 

@@ -1,4 +1,4 @@
-package com.palindromo.exercicio.domain.model;
+package com.palindromo.exercicio.domain.model.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

@@ -1,6 +1,6 @@
-package com.palindromo.exercicio.service;
+package com.palindromo.exercicio.domain.service;
 
-import com.palindromo.exercicio.domain.dto.PalindromoDTO;
+import com.palindromo.exercicio.domain.model.dto.PalindromoDTO;
 
 import java.util.List;
 
