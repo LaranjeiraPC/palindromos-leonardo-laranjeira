@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS palindromo (
+   id SERIAL NOT NULL,
+   palavra VARCHAR(10) NOT NULL,
+   CONSTRAINT id_pkey PRIMARY KEY (id)
+);
