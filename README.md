@@ -33,7 +33,7 @@ password: 1234
 
 #### POST /palindromos
 ````
-curl --location 'http://localhost:8080/palindromo' \
+curl --location 'http://localhost:8080/api/palindromos/v1/palindromo' \
 --header 'Content-Type: application/json' \
 --data '[
  "OSSO",
@@ -43,7 +43,7 @@ curl --location 'http://localhost:8080/palindromo' \
 
 #### GET /palindromos
 ````
-curl --location 'http://localhost:8080/palindromo'
+curl --location 'http://localhost:8080/api/palindromos/v1/palindromo'
 ````
 
 ## Collection Postman

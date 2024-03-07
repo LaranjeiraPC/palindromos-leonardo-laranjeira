@@ -26,8 +26,8 @@ public class PalindromoController {
     @PostMapping("/palindromo")
     @Operation(summary = "Salvar Palíndromo(s)", description = "Verifica e armazena na base de dados o(s) palíndromo(s) encontrado(s)")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Dados cadastrado com sucesso"),
-            @ApiResponse(responseCode = "400", description = "Bad Request"),
+            @ApiResponse(responseCode = "200", description = "Dados cadastrados com sucesso"),
+            @ApiResponse(responseCode = "400", description = "Bad Request - Verificar quantidade de linhas e/ou colunas"),
             @ApiResponse(responseCode = "500", description = "Internal Server Error - Erro inesperado no processamento de dados")
     })
     public ResponseEntity<List<PalindromoDTO>> salvarPalindromo(@RequestBody List<String> palavras) {
@@ -37,9 +37,9 @@ public class PalindromoController {
     @GetMapping("/palindromo")
     @Operation(summary = "Listar Palíndromo(s)", description = "Retorna uma lista de palíndromos")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Successfully retrieved"),
+            @ApiResponse(responseCode = "200", description = "Dados consultados com sucesso"),
             @ApiResponse(responseCode = "404", description = "Not Found - Palíndromo não encontrado"),
-            @ApiResponse(responseCode = "500", description = "Internal Server Error - The product was not found")
+            @ApiResponse(responseCode = "500", description = "Internal Server Error - Erro inesperado ao consultar dados")
     })
     public ResponseEntity<List<PalindromoDTO>> listarPalindromo(@RequestParam(required = false) String palindromo) {
         return ResponseEntity.ok(this.listaPalindromoService.listarPalindromo(palindromo));

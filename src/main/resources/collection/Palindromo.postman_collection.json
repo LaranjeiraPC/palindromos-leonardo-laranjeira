@@ -80,7 +80,7 @@
 	"variable": [
 		{
 			"key": "URL",
-			"value": "http://localhost:8080",
+			"value": "http://localhost:8080/api/palindromos/v1",
 			"type": "string"
 		}
 	]

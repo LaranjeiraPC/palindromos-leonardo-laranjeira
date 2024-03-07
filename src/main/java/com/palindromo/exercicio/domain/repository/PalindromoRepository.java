@@ -4,6 +4,7 @@ import com.palindromo.exercicio.domain.model.entity.Palindromo;
 import jakarta.annotation.Nullable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -12,6 +13,6 @@ import java.util.List;
 public interface PalindromoRepository extends JpaRepository<Palindromo, Integer> {
 
     @Query(value = "FROM Palindromo p WHERE (:palavra IS NULL OR p.palavra = :palavra)")
-    List<Palindromo> listar(@Nullable String palavra);
+    List<Palindromo> listar(@Nullable @Param("palavra") String palavra);
 
 }
